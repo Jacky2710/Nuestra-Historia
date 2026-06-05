@@ -1,0 +1,708 @@
+/* ==========================
+   CONFIGURACIÓN GENERAL
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:#040812;
+
+    color:white;
+
+    overflow-x:hidden;
+
+}
+
+/* ==========================
+   INTRO PELÍCULA
+========================== */
+
+#intro-screen{
+
+    position:fixed;
+
+    width:100%;
+    height:100vh;
+
+    background:
+    radial-gradient(circle at center,
+    #101826,
+    #000);
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    z-index:99999;
+
+}
+
+.intro-content{
+
+    max-width:800px;
+    padding:30px;
+
+}
+
+.intro-small{
+
+    color:#ffd700;
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+    margin-bottom:25px;
+
+}
+
+.intro-title{
+
+    font-size:4rem;
+
+    margin-bottom:20px;
+
+    text-shadow:
+    0 0 20px rgba(255,255,255,.3),
+    0 0 40px rgba(255,192,203,.4);
+
+}
+
+.intro-subtitle{
+
+    opacity:.8;
+
+    margin-bottom:40px;
+
+}
+
+#startBtn{
+
+    padding:18px 40px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:linear-gradient(
+    45deg,
+    #ff5ca8,
+    #ffd700);
+
+    color:white;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.4s;
+
+}
+
+#startBtn:hover{
+
+    transform:
+    scale(1.05);
+
+}
+
+/* ==========================
+   ESTRELLAS
+========================== */
+
+#stars{
+
+    position:fixed;
+
+    width:100%;
+    height:100%;
+
+    z-index:-1;
+
+    background:
+    radial-gradient(circle at 20% 20%, rgba(255,255,255,.7) 1px, transparent 1px),
+    radial-gradient(circle at 80% 40%, rgba(255,255,255,.5) 1px, transparent 1px),
+    radial-gradient(circle at 40% 70%, rgba(255,255,255,.6) 1px, transparent 1px),
+    radial-gradient(circle at 70% 90%, rgba(255,255,255,.5) 1px, transparent 1px);
+
+    background-size:300px 300px;
+
+}
+
+/* ==========================
+   HERO
+========================== */
+
+.hero{
+
+    height:100vh;
+
+    background:
+    linear-gradient(
+    rgba(0,0,0,.55),
+    rgba(0,0,0,.8)
+    ),
+    url("img/portada2.jpeg");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+}
+
+.hero-overlay{
+
+    max-width:900px;
+
+    padding:20px;
+
+}
+
+.hero h1{
+
+    font-size:6rem;
+
+    text-shadow:
+    0 0 20px rgba(255,255,255,.2),
+    0 0 50px rgba(255,255,255,.2);
+
+}
+
+.movie-title{
+
+    margin-top:20px;
+
+    letter-spacing:8px;
+
+    color:#ffd700;
+
+    font-size:1rem;
+
+}
+
+.subtitle{
+
+    margin-top:30px;
+
+    font-size:1.3rem;
+
+    line-height:1.8;
+
+}
+
+/* ==========================
+   BOTONES
+========================== */
+
+.btn{
+
+    display:inline-block;
+
+    margin-top:35px;
+
+    padding:15px 35px;
+
+    text-decoration:none;
+
+    color:white;
+
+    border-radius:50px;
+
+    background:
+    rgba(255,255,255,.12);
+
+    backdrop-filter:blur(15px);
+
+    transition:.4s;
+
+}
+
+.btn:hover{
+
+    transform:
+    translateY(-4px);
+
+}
+
+/* ==========================
+   SECCIONES
+========================== */
+
+.section{
+
+    padding:110px 10%;
+
+}
+
+.section h2{
+
+    text-align:center;
+
+    font-size:2.7rem;
+
+    margin-bottom:50px;
+
+}
+
+/* ==========================
+   GLASSMORPHISM
+========================== */
+
+.glass-card{
+
+    max-width:900px;
+
+    margin:auto;
+
+    padding:45px;
+
+    border-radius:30px;
+
+    background:
+    rgba(255,255,255,.08);
+
+    backdrop-filter:blur(20px);
+
+    border:
+    1px solid rgba(255,255,255,.1);
+
+}
+
+.glass-card p{
+
+    line-height:2;
+
+    margin-bottom:15px;
+
+}
+
+.center{
+
+    text-align:center;
+
+}
+
+/* ==========================
+   CONTADOR
+========================== */
+
+.counter-box{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:25px;
+
+    flex-wrap:wrap;
+
+}
+
+.counter-item{
+
+    width:180px;
+
+    padding:30px;
+
+    text-align:center;
+
+    border-radius:25px;
+
+    background:
+    rgba(255,255,255,.08);
+
+}
+
+.counter-item span{
+
+    font-size:3rem;
+
+    font-weight:bold;
+
+    display:block;
+
+    color:#ffd700;
+
+}
+
+/* ==========================
+   TIMELINE
+========================== */
+
+.timeline{
+
+    max-width:900px;
+
+    margin:auto;
+
+}
+
+.timeline-item{
+
+    margin-bottom:20px;
+
+    padding:25px;
+
+    border-radius:20px;
+
+    background:
+    rgba(255,255,255,.08);
+
+    border-left:
+    5px solid #ffd700;
+
+    transition:.4s;
+
+}
+
+.timeline-item:hover{
+
+    transform:
+    translateX(12px);
+
+}
+
+/* ==========================
+   GALERÍA
+========================== */
+
+.gallery{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap:20px;
+
+}
+
+.gallery img{
+
+    width:100%;
+
+    height:360px;
+
+    object-fit:cover;
+
+    border-radius:25px;
+
+    transition:.5s;
+
+    cursor:pointer;
+
+}
+
+.gallery img:hover{
+
+    transform:
+    scale(1.05);
+
+    box-shadow:
+    0 0 30px rgba(255,255,255,.2);
+
+}
+
+/* ==========================
+   RAZONES
+========================== */
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap:20px;
+
+}
+
+.love-card{
+
+    padding:30px;
+
+    text-align:center;
+
+    border-radius:25px;
+
+    background:
+    rgba(255,255,255,.08);
+
+    transition:.4s;
+
+}
+
+.love-card:hover{
+
+    transform:
+    translateY(-10px);
+
+}
+
+/* ==========================
+   TE AMO 3D
+========================== */
+
+.floating-love{
+
+    font-size:6rem;
+
+    font-weight:bold;
+
+    text-align:center;
+
+    animation:
+    floatLove 4s infinite ease-in-out;
+
+    text-shadow:
+    0 0 20px white,
+    0 0 40px pink,
+    0 0 70px hotpink;
+
+}
+
+.floating-love span{
+
+    display:inline-block;
+
+    animation:
+    letterMove 3s infinite alternate;
+
+}
+
+@keyframes floatLove{
+
+    0%{
+        transform:
+        translateY(0);
+    }
+
+    50%{
+        transform:
+        translateY(-15px);
+    }
+
+    100%{
+        transform:
+        translateY(0);
+    }
+
+}
+
+@keyframes letterMove{
+
+    from{
+        transform:rotateY(-10deg);
+    }
+
+    to{
+        transform:rotateY(10deg);
+    }
+
+}
+
+/* ==========================
+   FIRMA
+========================== */
+
+.firma{
+
+    text-align:right;
+
+    margin-top:30px;
+
+    color:#ffd700;
+
+    font-size:1.3rem;
+
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+footer{
+
+    text-align:center;
+
+    padding:80px 20px;
+
+    background:#02040a;
+
+}
+
+/* ==========================
+   ANIMACIÓN SCROLL
+========================== */
+
+.reveal{
+
+    opacity:0;
+
+    transform:
+    translateY(60px);
+
+    transition:1s;
+
+}
+
+.reveal.active{
+
+    opacity:1;
+
+    transform:
+    translateY(0);
+
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:768px){
+
+.hero h1{
+
+    font-size:3.5rem;
+
+}
+
+.intro-title{
+
+    font-size:2.5rem;
+
+}
+
+.floating-love{
+
+    font-size:3rem;
+
+}
+
+.section{
+
+    padding:80px 7%;
+
+}
+/* ==========================
+   RESPONSIVE MÓVIL
+========================== */
+
+@media (max-width: 768px){
+
+    .hero h1{
+
+        font-size:2.8rem;
+
+        line-height:1.1;
+
+    }
+
+    .movie-title{
+
+        font-size:.9rem;
+
+        letter-spacing:4px;
+
+    }
+
+    .subtitle{
+
+        font-size:1rem;
+
+        padding:0 15px;
+
+    }
+
+    .hero-photo{
+
+        width:220px;
+
+        height:220px;
+
+    }
+
+    .glass-card{
+
+        padding:25px;
+
+    }
+
+    .section{
+
+        padding:70px 20px;
+
+    }
+
+    .counter-item{
+
+        width:120px;
+
+        padding:20px;
+
+    }
+
+    .counter-item span{
+
+        font-size:2rem;
+
+    }
+
+    .floating-love{
+
+        font-size:2.5rem;
+
+    }
+
+}
+
+/* CELULARES PEQUEÑOS */
+
+@media (max-width: 480px){
+
+    .hero h1{
+
+        font-size:2.2rem;
+
+    }
+
+    .hero-photo{
+
+        width:180px;
+
+        height:180px;
+
+    }
+
+    .btn{
+
+        padding:12px 25px;
+
+        font-size:.9rem;
+
+    }
+
+}
+
+}
